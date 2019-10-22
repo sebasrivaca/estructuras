@@ -1,0 +1,7 @@
+modelo\Genus.class
+controller\Controller.class
+modelo\Gym.class
+view\Console.class
+modelo\DocumentType.class
+modelo\Client.class
+utilities\Utilities.class
