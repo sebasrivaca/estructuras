@@ -44,10 +44,10 @@ public class Controller {
                 createClient();
                 break;
             case SECOND_OPTION:
-                showListDatasTwo();
+                showClient();
                 break;
             case THIRD_OPTION:
-                showListDatas();
+                showClients();
                 break;
             case FOURTH_OPTION:
                 inItTwo();
@@ -118,12 +118,13 @@ public class Controller {
                         console.getSurName(), console.getGender(), console.getWeight(), console.getHeight()));
     }
 
-    private void showListDatas() {
-        console.showListDatas(gymUptc.toMatrixVector());
+    private void showClient() {
+        
+        console.showListDatas(gymUptc.getClients());
     }
 
-    private void showListDatasTwo() {
-        console.showListDatasTwo(gymUptc.toVector(console.getNumberDocument()));
+    private void showClients() {
+        console.showListDatasTwo(gymUptc.getClients());
     }
 
     private void editName() {
@@ -156,7 +157,7 @@ public class Controller {
 
     private void deleteClient() {
         gymUptc.deleteClient(console.getNumberDocumentDelete());
-        ;
+      
     }
 
     private void showGraphicMan() {

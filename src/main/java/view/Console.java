@@ -6,6 +6,7 @@
 package view;
 
 import java.util.Scanner;
+import modelo.Client;
 import modelo.DocumentType;
 import modelo.Genus;
 
@@ -43,10 +44,12 @@ public class Console {
 		scanner = new Scanner(System.in);
 	}
 	
-	public void showListDatas(Object[][] datasList) {
+	public void showListDatas(Client[] clients) {
 		generateHeader();
-		for(Object[] datasObject : datasList) {
-			System.out.println(String.format( FORMAT, datasObject));
+                 for(int i =0;i< clients.length;i++) {
+                         System.out.print(clients[i].getDocumentNumber()+"  "+clients[i].getNames()+" "+ clients[i].getSurnames() +
+                                 " " + clients[i].getGender()+" "+clients[i].getWeight()+" "+clients[i].getHeight()+" "+clients[i].calculateIMC());
+                         System.out.println("");
 		}
 	}
 	

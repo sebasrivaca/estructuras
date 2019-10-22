@@ -18,6 +18,10 @@ public class Client {
     private Genus gender;
     private double weight;
     private double height;
+
+    public Client() {
+    }
+    
 	
     public Client(DocumentType documentType, String documentNumber, String names, String lastnames, Genus gender, double weight, double height) {
 	this.documentType = documentType;
@@ -91,7 +95,4 @@ public class Client {
 	return report;
     }
     
-    public Object[] toObjectVector() {
-	return new Object[] {documentType, documentNumber, names, lastnames, gender, height, weight, calculateIMC()};
-    }
 }
